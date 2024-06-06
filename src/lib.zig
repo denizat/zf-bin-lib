@@ -2,6 +2,10 @@ const filter = @import("filter.zig");
 const std = @import("std");
 const testing = std.testing;
 
+const main = @import("main.zig");
+pub fn zfMain() anyerror!void {
+    return main.main();
+}
 /// rank a given string against a slice of tokens
 pub fn rank(
     str: []const u8,
